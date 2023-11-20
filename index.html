@@ -7,14 +7,14 @@
   </head>
   <body>
     <div id="app">
-        <ul>
-            <li v-for="(text,i) in list" :key="i">
-                <div class="div">
-                    {{list[i].text}}
-                </div>
-                <button @click="removeItem(i)">X</button>
-            </li>
-        </ul>
+      <input type="text" v-model="newItem" />
+      <button @click="addItem()">Inserisci task</button>
+      <ul>
+        <li v-for="(text,i) in list" :key="i">
+          <div class="div">{{list[i].text}}</div>
+          <button @click="removeItem(i)">X</button>
+        </li>
+      </ul>
     </div>
     <!--vue-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
